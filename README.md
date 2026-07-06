@@ -138,7 +138,47 @@ Datasets are loaded using:
 importMatrixCsv(&rows, &cols, &dataset, csvPath);
 ```
 
-The CSV should contain one sample per row. The input and output columns are selected through the parameters passed to `trainNetwork()` and `testNetwork()`.
+## Dataset Format
+
+Datasets are loaded using:
+
+```c
+importMatrixCsv(&rows, &cols, &dataset, csvPath);
+```
+
+The dataset must contain one sample per row. The first line specifies the number of rows and columns, separated by a space.
+
+For example:
+
+```text
+507531 3
+0,140,468
+1,260,438
+...
+0,412,192
+1,523,338
+```
+
+In this example:
+
+- `507531` is the number of samples (rows).
+- `3` is the number of columns.
+- Each subsequent line represents one sample.
+- The first value is the expected output (label).
+- The remaining values are the input features.
+
+So the row
+
+```text
+0,140,468
+```
+
+represents:
+
+- Expected output: `0`
+- Input vector: `(140, 468)`
+
+The columns used as inputs and outputs are specified when calling `trainNetwork()` and `testNetwork()`, allowing different dataset layouts to be used without modifying the CSV format.
 
 ---
 
