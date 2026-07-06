@@ -36,8 +36,6 @@ int main() {
         return -1;
     }
 
-    // Load existing weights (optional)
-    importNetwork(network, outPath);
 
     // Train with progressively smaller learning rates
     for (int i = 10; i <= 10000; i *= 10) {
