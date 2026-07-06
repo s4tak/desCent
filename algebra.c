@@ -3,7 +3,7 @@
 #include <string.h> 
 #include <time.h>
 #include <stdlib.h>
-#include "algebra2.h"
+#include "algebra.h"
 
 void addMatrix(int r, int c, float *M1, float *M2, float *result) {
     int totalElements = r * c;
