@@ -130,13 +130,6 @@ This creates:
 
 ---
 
-# Dataset Format
-
-Datasets are loaded using:
-
-```c
-importMatrixCsv(&rows, &cols, &dataset, csvPath);
-```
 
 ## Dataset Format
 
