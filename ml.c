@@ -4,7 +4,7 @@
 #include <time.h>
 #include <stdlib.h>
 #include "ml.h"
-#include "algebra2.h"
+#include "algebra.h"
 
 int countLayers(Layer *lastLayer){
     int total=0;
